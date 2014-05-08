@@ -60,8 +60,7 @@ $(document).ready(function(){
 	
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-	//setInterval(shake,100); // 계속 이 함수가 돌아가게 만들기 위해 선언함. 0.1초마다 이 함수가 실행됨(1000 = 1초)
-	shake();
-	firepoint();
+	setInterval(shake,100); // 계속 이 함수가 돌아가게 만들기 위해 선언함. 0.1초마다 이 함수가 실행됨(1000 = 1초)
+	setInterval(firepoint,500);
 
 });
