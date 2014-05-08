@@ -1,0 +1,36 @@
+html, body {
+	margin:0;
+}
+
+/*#ball{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: calc(50% - 25px);
+	left: 50%;
+	left: calc(50% - 25px);
+
+	background-color: red;
+	border-radius:25px;
+}*/
+div{
+	overflow: hidden;
+	position: absolute;
+}
+.wood{
+	width: 1333px;
+	height: 1455px;
+}
+.w01{
+	background-image: url('img/wood01.jpg');	
+}
+.w02{
+	background-image: url('img/wood02.jpg');	
+}
+.w03{
+	background-image: url('img/wood03.jpg');	
+}
+.w04{
+	background-image: url('img/wood04.jpg');	
+}
+
