@@ -36,13 +36,13 @@ $(document).ready(function(){
 
 
 	var fan = function(){
-		if(temp_y > -1 && y < 1){
+		if(temp_y === 7){
 	           $('.fan').addClass('fan');
 	        }
-	        else if(temp_y < -1){
+	        else if(temp_y === 4){
 	           $('.fan').addClass('fan2');
 	        }
-	        else if (temp_y > 1){
+	        else if (temp_y === 0){
 	           $('.fan').addClass('fan3');
 	        }
 	}
