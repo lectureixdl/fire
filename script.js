@@ -51,7 +51,7 @@ $(document).ready(function(){
 		y = Math.round(y); // 1이하 소숫점 버림.
 		temp_y = y;
 		
-		$("#xVal").html(Math.round(x));
+		$("#xVal").html(Math.round(y));
 		$("#sVal").html(shakepoint);
 
 		var maxX = window.innerWidth - $("#ball").width();
