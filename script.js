@@ -36,19 +36,14 @@ $(document).ready(function(){
 
 
 	var fan = function(){
-		if(temp_y === 7){
+		if(temp_y === 6){
 	           $('.fan').removeClass('fan2');
-	           $('.fan').removeClass('fan3');
-	        }
-	        else if(temp_y === 4){
-	           $('.fan').addClass('fan2');
-	           $('.fan').removeClass("fan3");
 
 	        }
-	        else if (temp_y === 0){
-	           $('.fan').addClass('fan3');
-	           $('.fan').removeClass("fan2");
+	        else if(temp_y === 5){
+	           $('.fan').addClass('fan2');
 	        }
+
 	}
 
 
