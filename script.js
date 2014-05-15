@@ -36,16 +36,16 @@ $(document).ready(function(){
 
 
 	var fan = function(){
-		if(temp_y === 7){
+		if(temp_y === 5){
 	           $('.fan').removeClass('fan2');
 	           $('.fan').removeClass('fan3');
 	        }
-	        else if(temp_y === 5){
+	        else if(temp_y === 4){
 	           $('.fan').addClass('fan2');
 	           $('.fan').removeClass("fan3");
 
 	        }
-	        else if (temp_y === 4){
+	        else if (temp_y === 3){
 	           $('.fan').addClass('fan3');
 	           $('.fan').removeClass("fan2");
 	        }
@@ -95,7 +95,7 @@ $(document).ready(function(){
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 	setInterval(shake,100); // 계속 이 함수가 돌아가게 만들기 위해 선언함. 0.1초마다 이 함수가 실행됨(1000 = 1초)
 	setInterval(firepoint,500);
-	setInterval(fan,10);
+	setInterval(fan,0);
 
 
 });
