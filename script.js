@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 
 	var fan = function(){
-		if(temp_y === 5){
+		if(temp_y === 7){
 	           $('.fan').removeClass('fan2');
 	           $('.fan').removeClass('fan3');
 	        }
@@ -45,7 +45,7 @@ $(document).ready(function(){
 	           $('.fan').removeClass("fan3");
 
 	        }
-	        else if (temp_y === 3){
+	        else if (temp_y === 0){
 	           $('.fan').addClass('fan3');
 	           $('.fan').removeClass("fan2");
 	        }
