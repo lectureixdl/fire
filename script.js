@@ -18,7 +18,7 @@ $(document).ready(function(){
 		}
 	}
 
-	var fan = function(){
+	var firepoint = function(){
 		if(shakepoint > 15){
 	           $('.w01').addClass('w04');
 	        }
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	        }
 	}
 	
-	var firepoint = function(){
+	var fan = function(){
 		if(y > -1 && y < 1){
 	           $('.fan').addClass('fan');
 	        }
