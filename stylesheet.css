@@ -1,14 +1,17 @@
 html, body {
 	margin:0;
+	width: 100%;
+	height: 100%;
 }
 
 div{
 	overflow: hidden;
 	position: absolute;
 }
-.wood{
-	width: 640px;
-	height: 1136px;
+.fullimage {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
 }
 .w01{
 	background-image: url('img/wood01.png');	
@@ -24,15 +27,22 @@ div{
 }
 
 .back{
-	width: 640px;
-	height: 1136px;
 	background-image: url('img/background.jpg');
 }
-.fan{
-	top:800px;
-	left:215px;
-	width:185px;
-	height: 272px;
+
+#fan-box {
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+}
+#fan-box div {
+	/*position: relative;*/
+	background-size: cover;
+	left: 30%;
+	width: 40%;
+	height: 100%;
+}
+.fan1{
 	background-image: url('img/fan.png');
 }
 .fan2{

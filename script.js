@@ -24,13 +24,13 @@ $(document).ready(function(){
 
 	var firepoint = function(){
 		if(shakepoint > 15){
-	           $('.w01').addClass('w04');
+				changeFireState('w04');
 	        }
 	        else if(shakepoint > 10){
-	           $('.w01').addClass('w03');
+				changeFireState('w03');
 	        }
 	        else if (shakepoint > 5){
-	           $('.w01').addClass('w02');
+				changeFireState('w02');
 	        }
 	}
 
@@ -84,6 +84,8 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 
+		changeFanState(y);
+
 
 	}
 
@@ -93,8 +95,29 @@ $(document).ready(function(){
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 	setInterval(shake,100); // 계속 이 함수가 돌아가게 만들기 위해 선언함. 0.1초마다 이 함수가 실행됨(1000 = 1초)
 	setInterval(firepoint,500);
-	setInterval(fan,0);
+	//setInterval(fan,0);
 
 
 });
 
+var changeFireState= function(state)
+{
+	$("#fire").removeClass();
+	$("#fire").addClass("fullimage").addClass(state);
+}
+
+var changeFanState = function(slope)
+{
+	var opacityFan1 = [0.0, 0.0, 0.0, 0.0, 0.3, 0.7, 1.0];
+	var opacityFan2 = [0.0, 0.3, 0.7, 1.0, 0.7, 0.3, 0.0];
+	var opacityFan3 = [1.0, 0.7, 0.3, 0.0, 0.0, 0.0, 0.0];
+
+	slope = Math.round(slope);
+	slope = Math.min(slope, 6);
+	slope = Math.max(slope, 0);
+
+	$(".fan1").css({opacity: opacityFan1[slope]});
+	$(".fan2").css({opacity: opacityFan2[slope]});
+	$(".fan3").css({opacity: opacityFan3[slope]});
+
+}
